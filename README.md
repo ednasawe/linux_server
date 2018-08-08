@@ -9,12 +9,11 @@ Us the VM to prepare it to host your web applications, include installing update
 and securing it from attack vectors, and installing/configuring web and database
 servers.
 
-    IP address: 35.167.27.204
+    IP address: 
 
     Accessible SSH port: 2200
 
-    Application URL: http://ec2-35-167-27-204.us-west-2.compute.amazonaws.com/
-
+    Application URL: 
 ### How to Run
 
 * Create a new user named _grader_ and give it the permission to _sudo_
@@ -38,7 +37,7 @@ sudo nano /etc/hosts
 ```
 * Prevent the error sudo: unable to resolve host by adding this line 
 ```
-127.0.1.1 ip-10-20-52-12
+127.0.1.1 ip
 ```
 * Update all currently installed packages
 * Download package lists with 
@@ -162,15 +161,15 @@ sudo nano /etc/apache2/sites-available/catalog.conf
     ServerName 35.167.27.204
     ServerAlias ec2-35-167-27-204.us-west-2.compute.amazonaws.com
     ServerAdmin admin@35.167.27.204
-    WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/catalog/venv/lib/python2.7/site-packages
+    WSGIDaemonProcess catalog python-path=/var/www/catalog:/var/www/item_catalog/venv/lib/python2.7/site-packages
     WSGIProcessGroup catalog
-    WSGIScriptAlias / /var/www/catalog/catalog.wsgi
-    <Directory /var/www/catalog/catalog/>
+    WSGIScriptAlias / /var/www/item_catalog/item_catalog.wsgi
+    <Directory /var/www/item_catalog/item_catalog/>
         Order allow,deny
         Allow from all
     </Directory>
-    Alias /static /var/www/catalog/catalog/static
-    <Directory /var/www/catalog/catalog/static/>
+    Alias /static /var/www/item_catalog/item_catalog/static
+    <Directory /var/www/item_catalog/item_catalog/static/>
         Order allow,deny
         Allow from all
     </Directory>
@@ -194,8 +193,8 @@ sudo nano /etc/apache2/sites-available/catalog.conf
     GRANT ALL ON SCHEMA public TO catalog;
     \q
     exit
-    Change create engine line in your __init__.py and database_setup.py to: engine = create_engine('postgresql://catalog:password@localhost/catalog')
-    python /var/www/catalog/catalog/database_setup.py
+    Change create engine line in your __init__.py and database_setup.py to: engine = create_engine('postgresql://catalog:password@localhost/item_catalog')
+    python /var/www/item_catalog/item_catalog/database_setup.py
     Make sure no remote connections to the database are allowed. Check if the contents of this file sudo nano /etc/postgresql/9.3/main/pg_hba.conf looks like this:
 
 local   all             postgres                                peer
