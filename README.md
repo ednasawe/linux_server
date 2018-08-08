@@ -210,14 +210,15 @@ host    all             all             ::1/128                 md5
 
 ### Resource
 
-**Choose A License** - Helpful website for picking out a license for an application.
-**Udacity** - Helpful in learning contents and resources to guide.
+* **Choose A License** - Helpful website for picking out a license for an application.
+
+* **Udacity** - Helpful in learning contents and resources to guide.
 
 ### How to Contribute
 
 Contributions are welcomes. If you find any typos, errors,
 or additional resources. First, fork this repository.
-- You can Fork Icon the project.
+- You can fork the project.
 - Or clone the repository to make changes.
 
 ```
@@ -226,7 +227,7 @@ $ git clone {REPOSITORY_CLONE_URL}
 $ cd to the directory
 ```
 
-- You can also Pull Request Icon by:
+- You can also pull request by:
 
 Making a pull request. Once you've pushed changes to
 your local repository, you can issue a pull request
