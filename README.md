@@ -208,12 +208,12 @@ host    all             all             ::1/128                 md5
 ```
     Visit site at http://35.167.27.204
 
-# Resource
+### Resource
 
 **Choose A License** - Helpful website for picking out a license for an application.
 **Udacity** - Helpful in learning contents and resources to guide.
 
-## How to Contribute
+### How to Contribute
 
 Contributions are welcomes. If you find any typos, errors,
 or additional resources. First, fork this repository.
@@ -232,6 +232,6 @@ Making a pull request. Once you've pushed changes to
 your local repository, you can issue a pull request
 by clicking on the pull request icon.
 
-# License
+### License
 
 The contents of this repository are covered under the **MIT License**
